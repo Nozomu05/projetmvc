@@ -23,6 +23,11 @@ switch ($page){
         $article = new ArticlesController();
         $article = getArticlesbyId();
 
+    case "contact":
+        include_once "controller/articlesController.php";
+        $article = new ArticlesController();
+        $article = getArticlesbyId();
+
     default: 
         include "view/404.php";
 }

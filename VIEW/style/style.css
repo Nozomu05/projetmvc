@@ -4,3 +4,7 @@
     text-transform: uppercase;
     letter-spacing: 0.20cap;
 }
+
+#contact-form{
+    flex-direction: column;
+}

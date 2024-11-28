@@ -1,11 +1,9 @@
 <h1>Contact</h1>
 
-<form action="" method="post">
-
-    Nom : <input type="text" name="nom" required> <br>
-    Prénom : <input type="text" name="prenom" required><br>
-    Email : <input type="email" name="email" required> <br>
-    Message : <input type="password" name="mdp" required> <br>
-    <button>Envoyer</button>
-
+<form action="POST" id="contact-form">
+    <input name="Nom" type="text" placeholder="Nom">
+    <input name="Prenom" type="text" placeholder="Prénom">
+    <input name="Email" type="text" placeholder="Email">
+    <textarea name="Message" placeholder="Message"></textarea>
+    <input name="Sendbutton" type="submit">
 </form>
