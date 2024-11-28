@@ -6,7 +6,7 @@ class Bdd{
     {
         try
         {
-            $bdd = new PDO("mysql:host=localhost;port=3307;dbname=smartbike","root","");
+            $bdd = new PDO("mysql:host=localhost;port=3306;dbname=smartbike","root","");
             return $bdd;
         }
         catch(Exception $e)
