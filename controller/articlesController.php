@@ -18,8 +18,8 @@ class ArticlesController
         $articlesId = $this->model->getArticlesbyId($_GET['id']);
         include_once 'view/commander.php'
     }
-    public function getLastArticleById(){
-        $lastarticle = $this->model->getLastArticleById();
+    public function getLastArticle(){
+        $lastarticle = $this->model->getLastArticle();
         include_once 'view/accueil.php'
     }
 

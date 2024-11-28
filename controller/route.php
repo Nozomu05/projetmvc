@@ -6,7 +6,7 @@ switch ($page){
     case "accueil":
         include_once 'controller/articlesController.php';
         $lastarticle = new ArticlesController();
-        $lastarticle = getLastArticleById();
+        $lastarticle = getLastArticle();
         break;
     case "commander":
         include_once "controller/articlesController.php";
