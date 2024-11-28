@@ -11,9 +11,19 @@ class ArticlesModel
     }
 
 // a modifier en fonction de nos besoins
-    public function getlastArticles()
+    public function getlastArticle()
     {
         return $this->bdd->query("SELECT * FROM produits WHERE id_produit=4")->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function getArticleById($id)
+    {
+        return $this->bdd->query("SELECT * FROM produits WHERE id_produit=$id")->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function getArticles()
+    {
+        return $this->bdd->query("SELECT * FROM produits")->fetchAll(PDO::FETCH_ASSOC);
     }
 
 }
