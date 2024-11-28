@@ -6,9 +6,7 @@ class Bdd{
     {
         try
         {
-           // $bdd = new PDO("mysql:host=localhost;port=3307;dbname=news","login","mdp");
             $bdd = new PDO("mysql:host=localhost;port=3307;dbname=smartbike","root","");
-          ///  echo "connexion BDD OK";
             return $bdd;
         }
         catch(Exception $e)

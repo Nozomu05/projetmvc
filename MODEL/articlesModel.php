@@ -10,25 +10,10 @@ class ArticlesModel
        $this->bdd = Bdd::connexion();
     }
 
-    public function getArticles()
+// a modifier en fonction de nos besoins
+    public function getlastArticles()
     {
-        return $this->bdd->query("SELECT * FROM articles")->fetchAll(PDO::FETCH_ASSOC);
-    }
-
-    public function getArticlesByCategorie($id)
-    {
-        return $this->bdd->query("SELECT * FROM articles WHERE id_categorie=$id")->fetchAll(PDO::FETCH_ASSOC);
-    }
-
-    public function getArticleById($id)
-    {
-        return $this->bdd->query("SELECT articles.*, categories.nom as cat, users.nom as nom FROM articles INNER JOIN categories ON categories.id_categorie=articles.id_categorie INNER JOIN users ON users.id_user=articles.id_user WHERE articles.id_article=$id")->fetch(PDO::FETCH_ASSOC);
+        return $this->bdd->query("SELECT * FROM produits WHERE id_produit=4")->fetchAll(PDO::FETCH_ASSOC);
     }
 
 }
-
-// test 
-/*
-$articles = new ArticlesModel;
-var_dump($articles->getArticles());
-*/

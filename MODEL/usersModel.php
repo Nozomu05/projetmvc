@@ -9,15 +9,11 @@ class UsersModel
     {
         $this->bdd = Bdd::connexion();
     }
-
-    public function inscription($nom, $prenom, $tel, $email, $mdp)
+    
+//a modifier selon nos besoins
+    public function commande($nom, $prenom, $email, $message, $id_produit)
     {
-        $user = $this->bdd->prepare("INSERT INTO users(nom,prenom,tel,email,mdp) VALUES(?,?,?,?,?)");
-        return $user->execute([$nom, $prenom, $tel, $email, $mdp]);
-    }
-
-    public function getUserByEmail($email)
-    {
-        return $this->bdd->query("SELECT * FROM users WHERE email='$email'")->fetch(PDO::FETCH_ASSOC);
+        $user = $this->bdd->prepare("INSERT INTO commande(nom,prenom,email,message,id_produit) VALUES(?,?,?,?,?)");
+        return $user->execute([$nom, $prenom, $email, $message, $id_produit]);
     }
 }
