@@ -8,13 +8,20 @@ switch ($page){
         $lastarticle = new ArticlesController();
         $lastarticle = getLastArticle();
         break;
+    case "produits":
+        include_once 'controller/articlesController.php';
+        $allArticle = new ArticlesController();
+        $allArticle = getArticles();
+        break;
     case "commander":
         include_once "controller/articlesController.php";
-        $articleId = new ArticlesController();
-        $articleId = getArticlesbyId();
         $articles = new ArticlesController();
-        $articles = getArticles();
+        $articles = getArticlesCommande();
         break;
+    case "article":
+        include_once "controller/articlesController.php";
+        $article = new ArticlesController();
+        $article = getArticlesbyId();
 
     default: 
         include "view/404.php";
